@@ -1,0 +1,85 @@
+
+{% extends 'head.html'%}
+{% block t1 %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+
+        <style>
+            body{
+                
+                font-family: normal;
+                
+            }
+            
+            .main{
+                height: 150%;
+                width: 90%;
+            }
+            .head{
+                margin-top: -5px;
+                height: 100px;
+                width: 100%;
+                background-image: url(https://legalsolutions.thomsonreuters.co.uk/content/dam/openweb/images/uk-legal-solutions/artworked/hero/199166-548310037-free-trial-banner-3.jpg.transform/billboard-1168/q90/image.jpg);
+
+            }
+            .head h2{
+                font-size: 45px;
+                text-align: center;
+                color:aliceblue;
+                
+            }
+            .head p{
+                font-size: 25px;
+                text-align: center;
+                color: aliceblue;
+            }
+            .card:hover{
+            -ms-transform: scale(1.1); 
+            -webkit-transform: scale(1.1); 
+            transform: scale(1.1); 
+            }
+            h1{
+                margin-left: 9px;
+            }
+            
+            
+        </style>
+
+    </head>
+    <body>
+        <div class="head">
+            <h2><u> Courses </u></h2>
+            <p> Learn Best Courses From V CUBE Software Solutions Pvt Ltd  </p>
+        </div>
+       
+        <div class="wrapper">
+            <section id="products">
+                <div class="container py-0">
+                    <div class="row">
+                        {% for obj in data %}
+                        <div class="col-lg-3 col-md-10 col-sm-10 mt-4 ">
+                            <a href="{% url 'coursedetailsurl' obj.cname %}">
+                                <div class="card"> <img class="card-img-top" src="{{obj.image.url}}">
+                                    <div class="card-body">
+                                        <h6 class="font-weight-bold pt-0">{{obj.cname}}</h6>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </section>
+        </div>  
+    </body>
+</html>
+{% include 'media.html' %}
+{% include 'last.html' %}
+{% endblock t1 %}

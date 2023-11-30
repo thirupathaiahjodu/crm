@@ -1,0 +1,66 @@
+<!-- Display all reviews -->
+
+<html>
+<head>
+    <style>
+        /* .dropdown {
+            margin-left: 82%;
+            margin-top: -46px;
+        }
+
+        .dropdown-menu {
+            font-size: 20px;
+            margin-left: 5px;
+        }
+
+        .review {
+            overflow: auto;
+            margin-left: 1%;
+        }
+
+        .review h1 {
+            text-align: center;
+            color: darkorange;
+            font-size: 40px;
+            margin-top: 30px;
+        } */
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="dropdown">
+        <button class="btn btn-Dark dropdown-toggle fs-1 darkorange " type="button" data-toggle="dropdown" style="color: white; font-weight: bold;">Select a Page</button>
+        <ul class="dropdown-menu">
+            <li><a href="{% url 'addreviewurl' %}">Add Reviews</a></li>
+            <li><a href="{% url 'show_reviews' %}">Review Records</a></li>
+            <li><a href="">Delete Reviews</a></li>
+        </ul>
+    </div>
+
+    {% for review in reviews %}
+<div class="card padding-left-2">
+    <!-- Video element to display the student's review video -->
+    <video src="{{ review.video.url }}" play controls style="width: 300px; height: 190px;"></video>
+    
+    <!-- Displaying the student's name -->
+    <h2>Name: {{ review.name }}</h2>
+    
+    <!-- Add other review details here as needed -->
+    
+    <!-- Delete button -->
+    <form method="post" action="">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">Delete</button>
+    </form>
+    
+    <!-- Edit button -->
+    <a href="{% url 'editreviewurl' review.id %}" class="btn btn-primary">Edit</a>
+</div>
+{% endfor %}
+
+
+</body>
+</html>
+

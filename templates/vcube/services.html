@@ -1,0 +1,331 @@
+
+{% extends 'head.html' %}
+{% block t1 %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="data:,">
+  
+    <title>Student Inquiry Form</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        margin: 0;
+        padding: 0;
+      }
+  
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+  
+      .card {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 20px;
+        width: 400px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+      }
+  
+      .form-field {
+        margin-bottom: 15px;
+      }
+  
+      .form-field label {
+        display: block;
+        margin-bottom: 5px;
+      }
+  
+      .form-field input[type="text"],
+      .form-field input[type="tel"],
+      .form-field select,
+      .form-field input[type="date"],
+      .form-field input[type="time"],
+      .form-field textarea {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+  
+      .form-field select {
+        appearance: none;
+        padding-right: 30px;
+      }
+  
+      .form-field button {
+        background-color: #007BFF;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+  
+      .form-field button:hover {
+        background-color: #0056b3;
+      }
+      </style>
+  </head>
+  <body>
+  <h1>Student Enquiry Form</h1>
+  <div class="card">
+    <form id="studentForm" method="post" enctype="multipart/form-data">
+         {% csrf_token %}
+      <div class="form-field">
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" required>
+      </div>
+      <div class="form-field">
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" required>
+      </div>
+      <div class="form-field">
+        <label for="mobileNumber">Mobile Number:</label>
+        <input type="tel" id="mobileNumber" name="mobileNumber" required>
+      </div>
+      <!--  <div class="form-field">
+        <label for="experience">Experience:</label>
+        <select id="experience" name="experience" required>
+          <option value="" disabled selected>Select an option</option>
+          <option value="Fresher">Fresher</option>
+          <option value="Experience">Experience</option>
+        </select>
+      </div> 
+      <div id="fresherField" class="form-field" style="display: none;">
+              </div>
+      <div id="experienceField" class="form-field" style="display: none;">
+        <select for="experienceDetails">Experience Details:</select>
+        <input type="text" id="experienceDetails" name="experienceDetails" placeholder="Enter details for Experience">
+      </div> -->
+      <div class="form-field">
+        <label for="experience">Experience:</label>
+        <select id="experience" name="experience" required>
+          <option value="" disabled selected>Select an option</option>
+          <option value="Fresher">Fresher</option>
+          <option value="1-year">1-year</option>
+          <option value="2-year">2-year</option>
+          <option value="3-year">3-year</option>
+          <!-- Add more options as needed -->
+        </select>
+      </div>
+      
+      <div id="experienceDetailsField" class="form-field" style="display: none;">
+        <label for="experienceDetails">Experience Details:</label>
+        <input type="text" id="experienceDetails" name="experienceDetails" placeholder="Enter 1-year experience details">
+      </div>
+      
+      <div class="form-field">
+        <label for="education">Education Qualification:</label>
+        <select id="education" name="education" required>
+          <option value="" disabled selected>Select an option</option>
+          <option value="High School">High School</option>
+          <option value="Bachelor's Degree">Bachelor's Degree</option>
+          <option value="Master's Degree">Master's Degree</option>
+          <option value="Doctorate">Doctorate</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <div id="otherQualificationDiv" class="form-field">
+        <label for="otherQualification">Other Qualification:</label>
+        <input type="text" id="otherQualification" name="otherQualification" placeholder="Enter your qualification">
+      </div>
+      <div class="form-field">
+        <label for="course">Course of Interest:</label>
+        <select id="course" name="course" required>
+          <option value="" disabled selected>Select a course</option>
+          <option value="Computer Science">Python</option>
+          <option value="Engineering">Engineering</option>
+          <option value="Business">Business</option>
+        </select>
+      </div>
+      <div class="form-field" id="subCourseField" style="display: none;">
+        <label for="subCourse">Sub-Course of Interest:</label>
+        <select id="subCourse" name="subCourse" required>
+          <option value="" disabled selected>Select a sub-course</option>
+          <!-- Add sub-course options here based on the main course selection -->
+        </select>
+      </div>
+      
+      
+      <div class="form-field">
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required>
+      </div>
+      <div class="form-field">
+        <label for="time">Time:</label>
+        <input type="time" id="time" name="time" required>
+      </div>
+      <div class="form-field">
+        <label for="ampm">AM/PM:</label>
+        <select id="ampm" name="ampm" required>
+          <option value="AM">AM</option>
+          <option value="PM">PM</option>
+        </select>
+      </div>
+      <div class="form-field">
+        <button class="text-align-center" type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    let serialNumber = 0;
+    
+    // Function to get the current date in YYYY-MM-DD format
+    function getCurrentDate() {
+      const now = new Date();
+      const year = now.getFullYear();
+      const month = String(now.getMonth() + 1).padStart(2, '0');
+      const day = String(now.getDate()).padStart(2, '0');
+      return `${year}-${month}-${day}`;
+    }
+
+    // Function to get the current time in HH:mm format
+    function getCurrentTime() {
+    const now = new Date();
+    let hours = now.getHours();
+    let minutes = now.getMinutes();
+    const ampm = hours >= 12 ? 'PM' : 'AM';
+    hours %= 12;
+    hours = hours || 12; // Convert 0 to 12
+
+    hours = String(hours).padStart(2, '0');
+    minutes = String(minutes).padStart(2, '0');
+    return { time: `${hours}:${minutes}`, ampm: ampm };
+  }
+
+  // ... Rest of the JavaScript code ...
+
+  // Set the current time and AM/PM in the respective input fields
+  const currentTime = getCurrentTime();
+  document.getElementById("time").value = currentTime.time;
+  document.getElementById("ampm").value = currentTime.ampm;
+
+    
+
+    // Event listener to toggle the display of the "Other" text box based on the select option
+    document.getElementById("education").addEventListener("change", function() {
+      const otherQualificationDiv = document.getElementById("otherQualificationDiv");
+      const otherQualification = document.getElementById("otherQualification");
+      if (this.value === "Other") {
+        otherQualificationDiv.style.display = "block";
+      } 
+      
+      else {
+        otherQualificationDiv.style.display = "none";
+        otherQualification.value = ""; // Clear the value if hidden
+      }
+    });
+
+    // Event listener to show the "Other" text box when "Experience" is selected
+    document.getElementById("experience").addEventListener("change", function() {
+      const otherQualificationDiv = document.getElementById("otherQualificationDiv");
+      const otherQualification = document.getElementById("otherQualification");
+      if (this.checked) {
+        otherQualificationDiv.style.display = "block";
+      } 
+    
+      else {
+        otherQualificationDiv.style.display = "none";
+        otherQualification.value = ""; // Clear the value if hidden
+      }
+    });
+    // Event listener to show/hide the experience details field based on the experience selection
+document.getElementById("experience").addEventListener("change", function() {
+  const experienceDetailsField = document.getElementById("experienceDetailsField");
+
+  if (this.value == "1-year") {
+    experienceDetailsField.style.display = "block";
+  } 
+  else if (this.value == "2-year"){
+    experienceDetailsField.style.display = "block";
+  }
+  else if (this.value == "3-year"){
+    experienceDetailsField.style.display = "block";
+  }
+  else {
+    experienceDetailsField.style.display = "none";
+  }
+});
+
+  //   document.getElementById("experience").addEventListener("change", function () {
+  //   const fresherField = document.getElementById("fresherField");
+  //   const experienceField = document.getElementById("experienceField");
+
+  //   if (this.value === "Fresher") {
+  //     fresherField.style.display = "block";
+  //     experienceField.style.display = "none";
+  //   } else if (this.value === "Experience") {
+  //     fresherField.style.display = "none";
+  //     experienceField.style.display = "block";
+  //   } else {
+  //     fresherField.style.display = "none";
+  //     experienceField.style.display = "none";
+  //   }
+  // });
+  // ... Rest of the JavaScript code ...
+
+// Event listener for the "Course of Interest" field
+document.getElementById("course").addEventListener("change", function() {
+  const subCourseField = document.getElementById("subCourseField");
+  const subCourseSelect = document.getElementById("subCourse");
+  
+  // Reset the sub-course select field
+  subCourseSelect.innerHTML = '<option value="" disabled selected>Select a sub-course</option>';
+  
+  if (this.value === "Computer Science") {
+    // Add sub-course options for Computer Science
+    subCourseSelect.innerHTML += `
+      <option value="Data Science">Python Full Stack</option>
+      <option value="Artificial Intelligence">Python + MySQL + django</option>
+      <option value="Software Engineering">Python + MySQl</option>
+      <!-- Add more options as needed -->
+    `;
+  } else if (this.value === "Engineering") {
+    // Add sub-course options for Engineering
+    subCourseSelect.innerHTML += `
+      <option value="Mechanical Engineering">Mechanical Engineering</option>
+      <option value="Electrical Engineering">Electrical Engineering</option>
+      <option value="Civil Engineering">Civil Engineering</option>
+      <!-- Add more options as needed -->
+    `;
+  } 
+  else if (this.value === "Business") {
+    // Add sub-course options for Business
+    subCourseSelect.innerHTML += `
+      <option value="Marketing">Marketing</option>
+      <option value="Finance">Finance</option>
+      <option value="Entrepreneurship">Entrepreneurship</option>
+      <!-- Add more options as needed -->
+    `;
+  }
+
+  // Show/hide the sub-course field based on the main course selection
+  if (this.value !== "") {
+    subCourseField.style.display = "block";
+  } else {
+    subCourseField.style.display = "none";
+  }
+});
+
+// ... Rest of the JavaScript code ...
+
+
+  </script>
+</body>
+</html>
+
+
+
+{% include 'media.html' %}
+{% include 'last.html' %}
+{% endblock t1 %}
+
+

@@ -1,0 +1,11 @@
+{% extends 'head1.html'%}
+{% block t2 %}
+<!-- Display the review details and provide a delete button -->
+<h2>Name: {{ review.name }}</h2>
+<!-- Display other review details as needed -->
+<form method="post">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-danger">Delete Review</button>
+</form>
+
+{% endblock t2 %}

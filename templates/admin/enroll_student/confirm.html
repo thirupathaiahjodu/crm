@@ -1,0 +1,43 @@
+{% extends 'head1.html'%}
+{% block t2 %}
+<html>
+    <head>
+        <style>
+            .head h1{
+                text-align: center;
+            }
+            .head table{
+                margin-left: 150px;
+                font-size: 25px;
+                margin-left: 200px;  
+            }   
+        </style>
+
+    </head>
+    <body>
+        <h1><u>Confirm Students</u></h1>
+            <table border="5" cellpadding="10" cellspacing="3"  style="margin-top: 20px; ">
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+              <div class="head">
+            
+                  <th>Mobile Number</th>
+                    <th>Courses</th>
+                    <th>Training</th>  
+                </tr>
+                {% for d in data %}
+                    <tr >
+                        <td>{{d.Name}}</td>
+                        <td>{{d.Email}}</td> 
+                        <td>{{d.Mobile_Number}}</td> 
+                        <td>{{d.Courses}}</td> 
+                        <td>{{d.Training}}</td>     
+                    </tr>
+                {% endfor %}
+            </table>
+    </div>
+    </body>
+
+</html>
+{% endblock t2 %} 

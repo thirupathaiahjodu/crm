@@ -1,0 +1,235 @@
+
+
+<html>
+    <head>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+             <!------ Include the above in your HEAD tag ---------->
+			
+    <style>
+            .navbar-brand img{
+                height: 100px;
+                width: 160px;
+                border-radius: 10px;
+                margin-left: 30px;
+            }
+            .navbar-nav{
+                
+                margin-left: 1000px;
+                
+            }
+            
+					
+            .main{
+                margin: 0px;
+                padding: 0px;
+                margin-top: 0px;
+                font-family: normal;
+            }
+            .head{
+               
+                height: 110px;
+                width: 100%;
+                margin-top: -5px;
+                background-image: url(https://legalsolutions.thomsonreuters.co.uk/content/dam/openweb/images/uk-legal-solutions/artworked/hero/199166-548310037-free-trial-banner-3.jpg.transform/billboard-1168/q90/image.jpg);
+                
+            }
+            .head h1{
+                font-size: 50px;
+                text-align: center;
+                color:aliceblue;
+
+                
+            }
+            .head p{
+                font-size: 30px;
+                text-align: center;
+                color: aliceblue;
+                
+                
+            }
+            .enroll_student{
+                background-color: #31e7e7e7;
+                width: 380px;
+                height: 250px;
+                
+                        
+            }
+            .enroll_student img{
+                height: 200px;
+                width: 380px;
+                border-radius: 20px;
+                    
+            }
+            .enroll_student h1{
+                text-align: center;
+                
+            }
+            .demos{
+                background-color: #31e7e7e7;
+                width: 380px;
+                height: 250px; 
+                margin-left: 420px;  
+                margin-top: -270px;      
+            }
+            .demos img{
+                height: 200px;
+                width: 380px;
+                border-radius: 20px;       
+            }
+            .demos h1{
+                text-align: center;
+                
+            }
+            .student_details{
+                background-color: #31e7e7e7;
+                width: 380px;
+                height: 250px;
+                margin-left: 840px; 
+                margin-top: -270px;           
+            }
+            .student_details img{
+                height: 200px;
+                width: 380px;
+                border-radius: 20px;       
+            }
+            .student_details h1{
+                text-align: center;
+            }
+            .review{
+                background-color: #31e7e7e7;
+                width: 380px;
+                height: 250px; 
+                        
+            }
+            .review img{
+                height: 200px;
+                width: 380px;
+                border-radius: 20px;       
+            }
+            .review h1{
+                text-align: center;
+            }
+            .placedstd {
+                background-color: #31e7e7e7;
+                width: 380px;
+                height: 250px;  
+                margin-left: 420px; 
+                margin-top: -270px; 
+            }
+            .placedstd img{
+                height: 200px;
+                width: 380px;
+                border-radius: 20px;       
+            }
+            .placedstd h1{
+                text-align: center;
+            }
+            .team{
+                background-color: #31e7e7e7;
+                width: 380px;
+                height: 250px; 
+                margin-left: 840px; 
+                margin-top: -270px;          
+            }
+            .team img{
+                height: 200px;
+                width: 380px;
+                border-radius: 20px;       
+            }
+            .team h1{
+                text-align: center;
+            }
+            .colabrations{
+                background-color: #31e7e7e7;
+                width: 380px;
+                height: 250px;          
+            }
+            .colabrations img{
+                height: 200px;
+                width: 380px;
+                border-radius: 20px;       
+            }
+            .colabrations h1{
+                text-align: center;
+            }
+               
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg mt-0" >
+            <div class="container-fluid" style="background-color:aliceblue ;">
+              <a class="navbar-brand ms-4" href="#">
+                <img src="https://d1fdloi71mui9q.cloudfront.net/lp3RTh22TimXgezp93dX_0001-31514908032.png" alt="">
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse ms-4" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-4 mb-lg-0 pl-2">
+                  <li class="nav-item me-2 ">
+                    <a class="btn bg-primary " aria-current="page" href="{% url 'logouturl' %}" style="color: white;"><b>Logout</b></a>
+                  </li>
+                </ul>
+            </div>
+        </div>	
+    </nav>
+        
+        <div class="main">
+            <div class="head">
+                <h1>Admin</h1>
+                <p>ANYTHING CAN BE LEARNED ONLINE, OFFLINE AND IN CORPORATE TRAININGS</p>
+            </div><br>
+            <div  style=" height: auto;  margin-left: 130px; ">
+                <div class="enroll_student" >
+                    <a href="{% url 'enrollstdurl' %}">
+                    <img src="https://thumbs.dreamstime.com/b/teenagers-young-team-together-cheerful-concept-67566731.jpg" alt="">
+                    <h1>Enrolled Student</h1>
+                    </a> 
+                </div><br>
+                <div class="demos">
+                    <a href="{% url 'demorecordurl' %}">
+                        <img src="https://image.slidesharecdn.com/truetimev4-170403141254/95/true-time-18-1024.jpg?cb=1491232909" alt="">
+                        <h1>Add Demos</h1>
+                    </a>
+                </div><br>
+                <div class="student_details">
+                    <a href="{% url 'studentdetailsurl' %}">
+                        <img src="https://th.bing.com/th/id/OIP.D7BAhrykHrJJN5NlZOt06wHaE8?pid=ImgDet&rs=1" alt="">
+                        <h1>Student Details</h1>
+                    </a>
+                </div> <br>
+
+                <div class=" review">
+                    <a href="{% url 'show_reviews' %}">
+                        <img src="https://th.bing.com/th/id/R.fec53731b0a512b632362962b7b73d3c?rik=5VQeVnmvA%2fdk7w&riu=http%3a%2f%2fwww.tourismtribe.com%2fwp-content%2fuploads%2fbigstock-Time-for-Review-card-with-colo-84652880.jpg&ehk=gjY%2fAVOOUbwkUZkIVcDymJV%2fAumaF9fs64W%2bfZ6NJyI%3d&risl=&pid=ImgRaw&r=0" alt="">
+                        <h1>Reviews</h1>
+                    </a>
+                </div><br>
+
+                <div class="placedstd">
+                    <a href="{% url 'placedstdurl' %}">
+                        <img src="https://th.bing.com/th/id/R.c1afc3cfb3216ac6fb2018a29d35103d?rik=tk7iNfnvNRZeJQ&riu=http%3a%2f%2fwww.gvsu.edu%2fcms4%2fasset%2fC1E02AA4-03EF-7AC1-9530B5E4CC79DC0B%2fstudent_placement_link.jpg&ehk=zqYRhviQdYWyjLry3Nqf3CtFtXM4PG4QkXDIhV4Yf%2bQ%3d&risl=&pid=ImgRaw&r=0" alt="">
+                        <h1>Placed Students</h1>
+                    </a>
+                </div><br>
+
+                <div class="team">
+                    <a href="{% url 'ourteamurl' %}">
+                        <img src="https://bvinfotech.com/wp-content/uploads/2020/11/blog-banner-team.jpg" alt="">
+                        <h1>Our Team</h1>
+                    </a>
+                </div><br>
+
+                <div class="colabrations">
+                    <a href="{% url 'colabrationsurl' %}">
+                        <img src="https://th.bing.com/th/id/OIP.J2Gdfn3aYE_5VRg7bmkMZAHaD1?pid=ImgDet&rs=1" alt="">
+                        <h1>Our Collabrations</h1>
+                    </a>
+                </div><br>
+           </div>  
+        </div>   
+    </body>
+</html>
+

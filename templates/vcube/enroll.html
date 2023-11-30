@@ -1,0 +1,121 @@
+{% extends 'head.html'%}
+{% block t1 %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+                background-image: url(https://t3.ftcdn.net/jpg/01/29/27/68/360_F_129276875_EdiO8jSL1QCl8wtfxA140Sjpf3UeBPYG.jpg);
+                font-family: normal;
+                font-weight: bold;
+            }
+        .head{
+                height: 110px;
+                width: 100%;
+                margin-top: -5px;
+                background-image: url(https://legalsolutions.thomsonreuters.co.uk/content/dam/openweb/images/uk-legal-solutions/artworked/hero/199166-548310037-free-trial-banner-3.jpg.transform/billboard-1168/q90/image.jpg);
+            }
+            .head h2{
+                font-size: 50px;
+                text-align: center;
+                color:aliceblue;
+               
+                
+            }
+            .head p{
+                font-size: 30px;
+                text-align: center;
+                color: aliceblue;
+            }
+            .main{ 
+                width: 100%;
+                height: 400px;
+                
+                
+            }
+            .main h1{  
+                margin-left: 43%;
+                font-size: 50px;
+                
+            }
+            .main-n{
+                height: 50%;
+                width: 50%;
+                text-align: center;
+                font-size: 25px;       
+            }
+            .left{
+                margin-left: 150px;
+                
+            
+            }
+            .right{
+                font-size: 20px;
+                height: 70%;
+                width: 70%;
+                margin-left: 850px;
+                margin-top: -450px;
+                
+                
+            }
+            
+            
+        
+    </style>
+    
+</head>
+<body>
+    <div class="head">
+        <h2> Enroll Here </h2>
+        <p> Learn Best Courses From V CUBE Software Solutions Pvt Ltd</p>
+    </div> 
+    <div class="main">
+        <div class="main-n">
+          <div class="left">
+                 <br>
+                 <h2 style="color: orangered;"><u>V CUBE SOFTWARE SOLUTIONS PVT.LTD </u></h2><br>
+                <h3>V CUBE SOFTWARE SOLUTIONS PVT.LTD 
+                    is one of the  Best software Training institutes,
+                    Can Assist you to Reach Your Goal with IT Courses</h3><br>
+                <h5> vcube software solutions is the world’s ace software course training organization with an aim to bridge the gap between the demands of the industry and the curriculum of educational institutions.
+                    With centers across the Globe, the institute is a platform where young minds are given the opportunity to build successful <br>
+                    ”vcube software solutions is a place where businesses find talent and dreams take flight."</h5>              
+        </div>
+        <div class="right">
+            
+            <form action="" method="post">
+                {% csrf_token %}
+                <h2 style="color:orangered; font-size: 45px; ">Enroll Here</h2><br>
+                {{form.Name.label}}  : {{form.Name}} <br><br>
+                {{form.Email.label}}  : {{form.Email}} <br><br>
+                {{form.Mobile_Number.label}}  : {{form.Mobile_Number}} <br><br>
+                {{form.Courses.label}}  : {{form.Courses}} <br><br>
+                {{form.Training.label}}  : {{form.Training}} <br><br>
+                {% if messages %}
+                <ul class="messages">
+                    {% for message in messages %}
+                        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>
+                            {% if message.tags == 'success' %}
+                                <span style="color: green;">{{ message }}</span>
+                            {% elif message.tags == 'error' %}
+                                <span style="color: red;">{{ message }}</span>
+                            {% else %}
+                                {{ message }}
+                            {% endif %}
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+                <input type="submit" value="submit" style=" border-radius: 7px; font-size: 25px;  cursor: pointer;"></button>
+            </form>
+            
+        </div><br><br>
+    </div> 
+</div><br><br> <br><br><br><br>
+
+
+</body>
+</html>
+{% include 'media.html' %}
+{% include 'last.html' %}
+{% endblock%}

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .bottom{
+            width: 100%;
+            height: 450px;
+            background-image: url(https://s3-us-west-2.amazonaws.com/prod-mvelopes-website/wp-content/uploads/blog-bg-new-1.jpg);
+            font-family: normal;
+            
+        }
+        .logo{
+            
+            width: 35%;
+            height: 100%;
+            text-align: center;
+            color: aliceblue;
+        }
+        .logo img{
+            height: 160px;
+            width: 240px;
+            margin-top: 5px;
+        }
+        .headings{
+            height: 100%;
+            width: 17%;
+            text-align: center;
+            margin-left: 35%;
+            margin-top: -420px;
+            font-size: 30px;
+            
+        }
+        .headings ol{
+            padding: 5px;
+            color: aliceblue;
+            
+            transition: transform .2s;
+        }
+        .headings ol:hover{
+            -ms-transform: scale(1.3); 
+            -webkit-transform: scale(1.3); 
+            transform: scale(1.3); 
+        }
+
+        .headings a{
+            text-decoration: none;
+            color: aliceblue;
+        }
+
+        .address1{
+            width: 25%;
+            height: 100%;
+            margin-left: 51%;
+            margin-top: -470px;
+            text-align: center; 
+            font-size: large; 
+            color: aliceblue;
+            
+        }
+        .address2{
+            width: 25%;
+            height: 100%;
+            margin-left: 75%;
+            margin-top: -450px;
+            text-align: center;
+            font-size: large;
+            color: aliceblue;
+        }
+        .address1 p{
+            font-size: 25px;
+            color:white;
+            
+        }
+        .address2 p{
+            font-size:25px ;
+            color:aliceblue;
+        }
+        .media{
+            height: 10%;
+            width: 18%;
+            margin-top: -55px;
+            margin-left: 540px;
+            padding: 5px;
+            transition: transform .2s;
+        }
+        .media img:hover{
+            -ms-transform: scale(1.3); 
+            -webkit-transform: scale(1.3); 
+            transform: scale(1.3); 
+        }
+
+    </style>
+</head>
+<body>
+    <div class="bottom">
+        <div class="logo">
+            <img src="https://d1fdloi71mui9q.cloudfront.net/lp3RTh22TimXgezp93dX_0001-31514908032.png" alt="" style="border-radius: 20px;"><br><br>
+            <h1>V CUBE SOFTWARE SOLUTIONS PVT.LTD</h1>
+            <h2>Learn Best Courses In Our Training Academy For your IT Career</h2>
+            <h3>V CUBE Can Assist you to Reach Your Goal with IT  Courses</h3>
+        </div>
+        <div class="headings">
+            <ul>
+                <ol><a href="{% url 'homeurl' %}">Home</a></ol>
+                <ol><a href="{% url 'abouturl' %}">About</a></ol>
+                <ol><a href="{% url 'coursesurl' %}">Courses</a></ol>
+                <ol><a href="{% url 'contacturl' %}">Contact</a></ol>
+                <ol><a href="{% url 'servicesurl' %}">Servises</a></ol>
+                <ol><a href="">Privacy Polacy</a></ol>
+                <ol><a href="{% url 'loginurl' %}">Login</a></ol>
+            </ul>
+         
+
+        </div>
+        <div class="address1">
+            <b><h2><u> Address 1:</u></h2>
+           <p> V CUBE Software Solutions Pvt.Ltd.<br>
+                second floor, 
+                above Raymond’s <br>
+                clothing store,<br>
+                KPHB Phase 1 Kukatpally,<br>
+                Hyderabad, <br>
+                Telangana 500072 <br>
+                Contact us : <br>
+                +917675070124 <br>
+                +919059456742</p></b>
+
+        </div>
+        <div class="address2">
+            <b><h2><u> Address 2:</u></h2>
+            <p>V CUBE Software Solutions <br> Pvt.Ltd. 
+                HIG-211, <br>
+                Beside Annamayya Hotel, <br>
+                Dhana Lakshmi Center,<br>
+                KPHB Phase 1&2,<br>
+                Kukatpally,
+                Hydearabad <br>
+                Telangana-500072 <br>
+                Contact us : <br>
+                +917675070124 <br>
+                +919059456742
+            </p></b>
+        </div>
+        <div class="media">
+            <a href="https://www.bing.com/ck/a?!&&p=c6088e5149b4e4c4JmltdHM9MTY4NTc1MDQwMCZpZ3VpZD0xNTJkODQ5Yy01MGViLTY3YmEtMmFlOS05NjFkNTFiOTY2MTImaW5zaWQ9NTIyNg&ptn=3&hsh=3&fclid=152d849c-50eb-67ba-2ae9-961d51b96612&psq=vcube+software+solutions+facebook&u=a1aHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL1ZDdWJlU29mdHdhcmVTb2x1dGlvbnMv&ntb=1"><img  src="https://1000logos.net/wp-content/uploads/2016/11/Facebook-logo.png" style="width: 45px;height: 35px;" ></a>
+            <a href=""><img  src="https://pngimg.com/uploads/instagram/instagram_PNG10.png" style=" height: 30px; width: 30px;"></a>&nbsp;&nbsp;
+            <a href=""><img src="https://feeds.abplive.com/onecms/images/uploaded-images/2023/07/24/d1c5b0bb6d3d68974aa535c859e8bb711690190849793402_original.jpg?impolicy=abp_cdn&imwidth=720" style="height: 30px; width: 30px; border-radius: 20px;"></a>
+            <a href=""><img  src="https://www.freeiconspng.com/uploads/logo-youtube-png-clipart-11.png" style="width: 40px; height: 30px;"></a>
+            <a href="https://in.linkedin.com/posts/vcubesoftsolutions_hiring-opportunity-software-activity-6975057934443560960-PnrB?trk=public_profile_share_view"><img src="https://www.kindpng.com/picc/m/363-3632986_logo-linkedin-png-rond-transparent-png.png" style="height: 30px; width: 30px; border-radius: 20px;"></a>
+        </div>
+    </div> 
+</body>
+</html>
+{% block last %} 
+{% endblock last %} 

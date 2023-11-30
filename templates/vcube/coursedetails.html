@@ -1,0 +1,88 @@
+
+{% extends 'head.html'%}
+{% block t1 %}
+<br><br>
+<html>
+    <head>
+        <style>
+            .main{
+                width: 70%;
+                height: auto;
+                margin-left: 15%;
+                text-align: center;
+                background-color: azure;
+                border-radius: 30px;
+                margin-top: -50px;
+                font-family: normal;
+            }
+            .main-n{
+                font-size: 25px;
+                margin-left: 0px;
+            }
+            h4{
+                color: orangered;
+                font-size: 30px;
+            }
+            p{
+                font-size: x-large;
+            }
+            
+        
+        </style>
+
+    </head>
+    <body>
+        {% for obj in data %}
+            <div class="main">
+                <div class="main-n">
+                    <h1 ><b>{{obj.cname}}</b></h1>
+                </div>
+                <hr style="margin-left: 20%; width: 60%;">
+                <div class="about">
+                    <h4><u> ABOUT {{obj.cname}} :</u></h4><br>
+                    <p>{{obj.desrciption}}</p>
+                    <img src="{{obj.image.url}}" width="410px" height="250px"><br><br>
+                </div>
+                <div class="futures">
+                    <h4><u>KeyFuteres of <b>{{obj.cname}}:</b></u> </h4><br>
+                    <p>{{obj.KeyFutures}}</p>
+                    <form action="" method="post" style="font-size: 25px;">
+                        {% csrf_token %}
+                        <u><h2 style="color: darkorange;">Enroll Here</h2></u>
+                        {{form.Name.label}}  :{{form.Name}} <br><br>
+                        {{form.Email.label}}  :{{form.Email}} <br><br>
+                        {{form.Mobile_Number.label}}  :{{form.Mobile_Number}} <br><br>
+                        {{form.Courses.label}}  :{{form.Courses}} <br><br>
+                        {{form.Training.label}}  :{{form.Training}} <br><br>
+                        {% for message in messages %}
+                        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>
+                            {% if message.tags == 'success' %}
+                                <span style="color: green;">{{ message }}</span>
+                            {% elif message.tags == 'error' %}
+                                <span style="color: red;">{{ message }}</span>
+                            {% else %}
+                                {{ message }}
+                            {% endif %}
+                        </li>
+                    {% endfor %}
+                        <input type="submit" value="submit" style="height: 37px ;width: 90px; border-radius: 7px; font-size: large; background-color: deeppink; color: aliceblue; cursor: pointer;"></button>
+                    </form>
+                </div><br>
+                <div class="highlights">
+                    <img src="{{obj.photo.url}}" width="510px" height="350px"><br><br>
+                    <h4><u> Highlights of <b>{{obj.cname}}</b></u></h4><br>
+                    <p>{{obj.highlights}}</p>
+                </div>
+                
+            </div>
+        {% endfor %}
+        <br><br>
+
+        
+        
+        
+    </body>
+</html>
+{% include 'media.html' %}
+{% include 'last.html' %} 
+{% endblock t1 %}

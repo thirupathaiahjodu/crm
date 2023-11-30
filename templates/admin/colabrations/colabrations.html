@@ -1,0 +1,70 @@
+{% extends 'head1.html'%}
+{% block t2 %}
+<html>
+<head>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+        .dropdown{
+                margin-left: 82%;
+                margin-top: -46px;
+                
+            }
+            .dropdown-menu{
+                font-size: 20px;
+                margin-left: 3px;
+            }
+            .colabrations{
+            width: 98%;
+           
+            margin-left: 1%;
+            }
+            .colabrations h1{
+                text-align: center;
+                color: darkorange;
+                font-size: 40px;
+                margin-top: 50px;
+            }
+            .colabrations img{
+                width: 50px;
+                height: 50px;
+                border-radius: 34px;
+                padding: 10px;
+                
+            }
+        
+    </style> 
+</head>
+<body>
+    <div class="dropdown">
+        <button class="btn btn-Dark dropdown-toggle fs-1 darkorange " type="button" data-toggle="dropdown" style="color: white; font-weight: bold;">Select a Page</button>
+        <ul class="dropdown-menu">
+            <li><a href="{% url 'addcolabrationsurl' %}">Add Colabrations</a></li>
+            <li><a href="{% url 'colabrationsurl' %}">Colabration Records</a></li>
+            <li><a href=""> Delete Colabrations</a></li>
+            
+        </ul>
+    </div>
+    <div class="colabrations">
+        <h1><u> Our Colabrations</u></h1>
+        <div style="width: 96%;margin-left: 2%;"><br>
+            {% for res in company %}
+            <div style="width: 230px; height: 180px;   padding: 1px; float: left;  margin-left: 20px; padding: 2px; white-space: nowrap;">
+                <img src="{{res.image.url}}" alt=""  style="width: 240px; height:140px ;">
+            </div>
+            {% endfor%}
+        </div>
+
+    </div>
+    
+    
+</body>
+</html>
+{% endblock t2 %} 

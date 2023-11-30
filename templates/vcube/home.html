@@ -1,0 +1,1481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+        crossorigin="anonymous"
+    />
+    <link rel="icon" href="https://www.vcubesoftsolutions.com/wp-content/uploads/2020/10/V-CUBE-Logo-4-scaled-e1636039304265.jpg" type="image/png" />
+
+    <style>
+        body{
+           
+            font-family:normal;
+            font-weight: bold;
+        }
+        .navbar-brand img{
+            height: 110px;
+            width: 180px;
+            border-radius: 10px;
+        }
+        .navbar-nav{
+            margin-left: 250px;
+            
+               
+        }
+
+        .navbar-nav btn{
+            background-color: aliceblue;
+            color: orangered;
+
+        }
+        .main-n{
+            height: 50%;
+            width: 50%;
+            text-align: center;
+            margin-left: 80px;
+            font-size: 25px;
+            margin-top: 40px;
+            font-style: normal;
+            
+            
+        }
+        .left{
+          font-weight: bold;
+        }
+        .right{
+            height: 50%;
+            width: 61%;
+            margin-left: 850px;
+            margin-top: -500px;
+            font-size: 25px;
+           
+        }
+        .form-card {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        background-color: #f9f9f9;
+    }
+
+    .form-row {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .form-label {
+        flex: 1;
+        font-size: 18px;
+        color: black;
+    }
+
+    .form-field {
+        flex: 2;
+        font-size: 18px;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .form-submit {
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .form-submit input[type="submit"] {
+        height: 37px;
+        width: 100px;
+        border-radius: 7px;
+        font-size: large;
+        background-color: blue;
+        color: aliceblue;
+        cursor: pointer;
+    }
+
+    .message {
+        font-size: 18px;
+        margin-top: 10px;
+        color: green;
+    }
+
+    .message.error {
+        color: red;
+    }
+        .content{
+        
+            width: 100%;
+            height: 70%;
+            margin-top: -50px;
+               
+        }
+        .one img{
+            width: 500px;
+            height: 350px;
+            margin-top: 80px;
+            margin-left: 140px;
+            border-radius: 60%;   
+        }
+        .one h1{
+            height: 500px;
+            width: 400px;
+            font-size: 45px;
+            margin-left: 60%;
+            margin-top: -320px;
+            color: orangered;
+        }
+        .one p{
+            height: 500px;
+            width: 450px;
+            margin-top: -400px;
+            margin-left: 60%;
+            font-size: large;
+        }
+        .two img{
+            width: 500px;
+            height: 350px;
+            margin-top: -290px;
+            margin-left: 820px;
+            border-radius: 60%; 
+        }
+        .two h1{
+            height: 500px;
+            width: 400px;
+            font-size: 45px;
+            margin-left: 10%;
+            margin-top: -350px;
+            color: orangered;
+
+        }
+        .two p{
+            height: 500px;
+            width: 550px;
+            margin-top: -450px;
+            margin-left: 12%;
+            font-size: large;
+        }
+        .three img{
+            width: 500px;
+            height: 350px;
+            margin-top: -200px;
+            margin-left: 170px;
+            border-radius: 60%;   
+        }
+        .three h1{
+            height: 500px;
+            width: 400px;
+            font-size: 45px;
+            margin-left: 60%;
+            margin-top: -320px;
+            color: orangered;
+        }
+        .three p{
+            height: 500px;
+            width: 450px;
+            margin-top: -450px;
+            margin-left: 60%;
+            font-size: large;
+        }
+        .advantage{
+            width: 70%;
+            height: 70%;
+            font-size: large;
+            text-align: center;
+            margin-left: 200px;
+            color: orangered; 
+             
+        }
+        
+        .aone{
+            width: 40%;
+            height: 200px;
+            margin-top: 30px;
+            margin-left: 8%;
+            color:black;
+
+        }
+        .atwo{
+            width: 35%;
+            height: 200px;
+            margin-top: -21.5%;
+            margin-left: 54%;
+            color:black;
+
+        }
+        .athree{
+            width: 38%;
+            height: 200px;
+            margin-top: 70px;
+            margin-left: 8%;
+            color:black;
+
+        }
+        .afour{
+            width: 35%;
+            height: 200px;
+            margin-left: 54%;
+            margin-top: -21%;
+            color:black;
+
+        }
+        .scrolling-wrapper {
+            overflow-x: auto;
+            white-space: nowrap;
+            scrollbar-width: thin;
+        }
+        .course-card {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px;
+            min-width: 200px;
+            max-width: 300px;
+            border: 1px solid #ccc;
+        }
+
+
+        #ol ol{
+            margin-top: 20px;
+            color:black;
+        }
+
+        .wider-card {
+            min-width: 300px;
+            max-width: 400px;
+            min-height: 250px;
+        }
+        .about{
+            width: 70%;
+            height: 70%;
+            font-size: large;
+            text-align: center;
+            margin-left: 200px;
+            color: orangered;
+        }
+        .onea{
+            width: 23%;
+            height: 200px;
+            margin-left: 7%;
+            color:black;
+        }
+        
+        .twoa{
+            width: 23%;
+            height: 200px;
+            margin-left: 38%;
+            margin-top: -200px;
+            color:black;
+        }
+        .threea{
+            width: 23%;
+            height: 200px;
+            margin-left: 70%;
+            margin-top: -200px;
+            color:black;
+        }
+        .foura{
+            width: 23%;
+            height: 200px;
+            margin-left: 7%;
+            margin-top: 65px;
+            color:black;
+            
+        }
+        .fivea{
+            width: 23%;
+            height: 200px;
+            margin-left: 38%;
+            margin-top: -200px;
+            color:black;
+        }
+        .sixa{
+            width: 23%;
+            height: 200px;
+            margin-left: 70%;
+           margin-top: -200px;
+           color:black;
+           
+        }
+        .media1{
+            height: 20%;
+            width: 28%;
+            margin-left: 600px;
+            padding:10px;
+            transition: transfrom.2s;
+            
+        }
+        
+        .media1 img:hover{
+            -ms-transform: scale(1.3); 
+            -webkit-transform: scale(1.3); 
+            transform: scale(1.3); 
+        }
+        .team{
+            width: 98%;
+            background-color: azure;
+           
+        }
+        .team h1{
+            text-align: center;
+            color: darkorange;
+            font-size: 40px;
+        }
+
+        .team img{
+            height: 100px;
+            width: 100px;
+            
+        }
+        .colabrations{
+            width: 98%;
+            margin-left: 1%;
+        }
+        .colabrations h1{
+            text-align: center;
+            color: orangered;
+            font-size: 40px;
+            font-weight: bold;
+        }
+        .colabrations img{
+            width: 50px;
+            height: 50px;
+            border-radius: 34px;
+            padding: 10px;
+            margin-left: 90px;
+            background-color: azure;
+            
+        }
+        .bottom{
+            font-size: 20px ;
+            width: 100%;
+            height: 420px;
+            background-image: url(https://s3-us-west-2.amazonaws.com/prod-mvelopes-website/wp-content/uploads/blog-bg-new-1.jpg);      
+        }
+        .logo{
+            width: 35%;
+            height: 100%;
+            text-align: center;
+            color: aliceblue;
+        }
+        .logo img{
+            height: 160px;
+            width: 240px;
+            margin-top: 5px;
+        }
+        .headings{
+            height: 100%;
+            width: 17%;
+            text-align: center;
+            margin-left: 35%;
+            margin-top: -400px;
+            font-size: 25px;      
+        }
+        .headings ol{
+            padding: 5px;
+            color: aliceblue;
+            transition: tranfirms.2s;
+            
+        }
+        .headings ol:hover{
+            -ms-transform: scale(1.3); 
+            -webkit-transform: scale(1.3); 
+            transform: scale(1.3); 
+        }
+        .headings a{
+            text-decoration: none;
+            
+            color: aliceblue;
+        }
+
+        .address1{
+            width: 23%;
+            height: 100%;
+            margin-left: 51%;
+            margin-top: -440px;
+            text-align: center; 
+            font-size: x-large; 
+            color: aliceblue;
+        }
+        .address2{
+            width: 25%;
+            height: 100%;
+            margin-left: 75%;
+            margin-top: -417px;
+            text-align: center;
+            font-size: x-large;
+            color: aliceblue;
+        }
+        .address1 p{
+            font-size: 22px;
+            color:white;
+            
+        }
+        .address2 p{
+            font-size:22px ;
+            color:white;
+        }
+        .media{
+            height: 10%;
+            width: 18%;
+            margin-top: -55px;
+            margin-left: 555px;
+            padding: -5px;
+            transition: transform.2s;
+        }
+        .media img:hover{
+            -ms-transform: scale(1.4); 
+            -webkit-transform: scale(1.4); 
+            transform: scale(1.4); 
+        }
+        
+        
+    </style> 
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg mt-0" >
+        <div class="container-fluid" style="background-color:aliceblue ; margin-top: -8px;">
+          <a class="navbar-brand ms-4" href="#">
+            <img src="https://d1fdloi71mui9q.cloudfront.net/lp3RTh22TimXgezp93dX_0001-31514908032.png" alt="">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse ms-4" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-4 mb-lg-0 w-">
+              <li class="nav-item me-2 ">
+                <a class="btn bg-light text-primary btn-lg " aria-current="page" href="{% url 'homeurl' %}">Home</a>
+              </li>
+              <li class="nav-item me-2 ">
+                <a class="btn bg-light btn-lg " href="{% url 'coursesurl' %}">Courses</a>
+              </li>
+              <li class="nav-item me-2">
+                <a class="btn bg-light btn-lg" href="{% url 'abouturl' %}">About</a>
+              </li>
+              <li class="nav-item me-2">
+                <a class="btn bg-light btn-lg" href="{% url 'demosurl' %}">Demos</a>
+              </li>
+              <li class="nav-item me-2">
+                <a class="btn bg-light btn-lg" href="{% url 'contacturl' %}">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="btn bg-light me-2 btn-lg" href="{% url 'servicesurl' %}">Services</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="btn bg-light me-2 btn-lg" href="{% url 'enrollurl' %}">Enroll</a>
+              </li>
+              <li class="nav-item">
+                <a class="btn bg-light me-2 btn-lg" href="{% url 'loginurl' %}">Login</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+      </nav>
+      <div class="main-n">
+        <div class="left">
+          <b>
+            <h1>V CUBE SOFTWARE SOLUTIONS <br> PVT.LTD </h1><br>
+                <h3>V CUBE SOFTWARE SOLUTIONS PVT.LTD 
+                    is one of the  Best software Training institutes,
+                    Can Assist you to Reach Your Goal with IT Courses</h3><br>
+                <h5> vcube software solutions is the world’s ace software course training organization with an aim to bridge the gap between the demands of the industry and the curriculum of educational institutions.
+                    With centers across the Globe, the institute is a platform where young minds are given the opportunity to build successful <br>
+                    ”vcube software solutions is a place where businesses find talent and dreams take flight."</h5> <br>     
+                <button style="height: 50px; font-size: 20px; border-radius: 10px; background-color:aliceblue; cursor: pointer; "><a href="{% url 'coursesurl' %}" style="text-decoration: none;"><b>View Courses</b></a></button>   
+          </b>       
+        </div>
+        <div class="right">
+            <div class="form-card">
+                <form action="" method="post">
+                    {% csrf_token %}
+                    <h1 style="color: black;">Enroll Here</h1>
+                    <div class="form-row">
+                        <label class="form-label" for="{{ form.Name.id_for_label }}">Name:</label>
+                        <div class="form-field">{{ form.Name }}</div>
+                    </div>
+            
+                    <div class="form-row">
+                        <label class="form-label" for="{{ form.Email.id_for_label }}">Email:</label>
+                        <div class="form-field">{{ form.Email }}</div>
+                    </div>
+            
+                    <div class="form-row">
+                        <label class="form-label" for="{{ form.Mobile_Number.id_for_label }}">Mobile Number:</label>
+                        <div class="form-field">{{ form.Mobile_Number }}</div>
+                    </div>
+                    <div class="form-row">
+                        <label class="form-label" for="">Graduation:</label>
+                        <div class="form-field">{{form.Graduation}}</div>
+                    </div>
+            
+                    <div class="form-row">
+                        <label class="form-label" for="{{ form.Courses.id_for_label }}">Courses:</label>
+                        <div class="form-field">{{ form.Courses }}</div>
+                    </div>
+            
+                    <div class="form-row">
+                        <label class="form-label" for="{{ form.Training.id_for_label }}">Training:</label>
+                        <div class="form-field">{{ form.Training }}</div>
+                    </div>
+            
+                    {% for message in messages %}
+                        <div class="message {% if message.tags %}{{ message.tags }}{% endif %}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+            
+                    <div class="form-submit">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </div>
+    
+        </div>
+    </div> 
+    <hr style="width: 90%; height: 1px;  margin-top: 100px; background-color: black; margin-left: 5%;">
+    <div class="content">
+        <div class="one">
+            <img src="https://d1fdloi71mui9q.cloudfront.net/lp3RTh22TimXgezp93dX_0001-31514908032.png" alt="">
+            <h1>What we do in Vcube...</h1>
+            <p>V CUBE Software Solutions Pvt.Ltd offers you the greatest available serivces
+                which are decsribed below <br>
+                *  Live classes <br>
+                *  24/7 Access <br>
+                *  Every projects <br>
+                *  One on one mentorship <br>
+                *  Guest lectures</p>
+        </div><br>
+        <div class="two">
+            <img src="https://www.vcubesoftsolutions.com/wp-content/uploads/2021/11/download-1536x1086.jpg" alt="">
+            <h1>What we're about?</h1>
+            <p>V CUBE SOFTWARE SOLUTIONS PVT.LTD, is an institute that caters to the needs
+                of students, businessmen and freelancers wanting to learn, improve,
+                explore and soar in their careers. Our corporate office is located in Kukatpally,
+                Hyderabad, India and our training centres are in Kukatpally and Ameerpet, Hyderabad,
+                    India. V CUBE Software Solutions Pvt.Ltd offers online information technology courses,
+                    online computer programming classes, and starting information technology courses
+                    . Take advantage of both online and offline resources.</p>
+        </div>
+        <div class="three">
+            <img src="https://www.vcubesoftsolutions.com/wp-content/uploads/2021/11/training.jpg" alt="">
+            <h1>OUR SERVICE</h1>
+            <p>We offer high-quality training from industry experts in a variety of technologies
+                to suit candidates with various academic backgrounds.The training is appropriate
+                for all aspiring IT professionals and is provided by an experienced faculty team.
+                We have seasoned instructors who can help professionals improve their technology
+                skills for day-to-day tasks.</p>
+
+        </div>
+    </div>
+    <hr style="width: 90%; height: 5px; margin-top: -150px; background-color: black; margin-left: 5%;">
+    <div class="advantage" >
+      <h1><u> The V CUBE Software Solutions Pvt.Ltd Advantages</u></h1>
+      <div class="aone">
+          <i class="fa-solid fa-business-time fa-beat" style="font-size: 40px; "></i>
+          <h2>In-Time Course Completion</h2>
+          <p>Committed to pure professionalism we make sure that the course program gets 
+              completed the scheduled time. Equal priority will be given for both theoretical 
+              & practical sessions</p>
+      </div><br>
+      <div class="atwo">
+          <i class="fa-solid fa-laptop fa-beat" style="font-size: 40px;"></i>
+          <h2>Free Demo Sessions</h2>
+          <p>Free Demo Sessions (Online/Offline) by our qualified domain experts will help
+              the aspirants to get a better idea about the course program & 
+              can get their doubts clarified by the experts</p>
+      </div>
+      <div class="athree">
+          <i class="fa-solid fa-briefcase fa-beat" style="font-size: 40px;"></i>
+          <h2>State-Of-The-Art Infrastructure</h2>
+          <p>Get ready to witness an ultimate learning experience with our 
+              state-of-the-art-infrastructure which includes digitalized classrooms,
+              sophisticated lab & other features</p>
+
+      </div><br>
+      <div class="afour">
+          <i class="fa-solid fa-blender fa-beat" style="font-size: 40px;"></i>
+          <h2>Blended Training Approach</h2>
+          <p>Exposure towards real-time industry training by our trusted experienced
+              trainers will help you become a complete dominant professional in your desired profession.</p>
+      </div>
+    </div>
+    
+    <hr style="width: 56%; height: 5px; margin-top: 100px;  margin-left: 20%;">
+    
+    <div class="container-fluid">
+        <div class="row" style="padding-left: 100px;padding-right: 100px;">
+          <h1 class="btn btn-success">RECENTLY PLACED STUDENTS</h1>
+          <div class="col-12" >
+              <div class="scrolling-wrapper">
+                {% for res in placed %}
+                  <div class="card course-card " style="width: 18rem;">
+                      <img src="{{ res.image.url }}" alt="" class="card-img-top" style="height: 150px; object-fit: contain;">
+                      <div class="card-body">
+                          <h3 class="card-title">{{ res.name }}</h3>
+                          <p class="card-text"><label>Course:</label> {{ res.course }}</p>
+                          <p class="card-text"><label>Company:</label> {{ res.company }}</p>
+                          <p class="card-text"><label>Package:</label> {{ res.pakage }}</p> 
+                      </div>                                
+                  </div>
+                {% endfor %}
+                <h1 class=" btn btn-primary" style="margin-top: -260px;"><a class="dropdown-item" href="">VIEW MORE</a></h1>
+              </div>
+          </div>
+        </div>
+    </div><br>
+
+    <div class="about">
+      <h1><u> The Best Place to Develop Your Career In V CUBE Software Solutions Pvt.Ltd</u></h1>
+      <div class="onea">
+          <h2>Price that is reasonable</h2>
+          <p>At a fair price, you can get 
+              the greatest learning experience
+              and the best knowledge-based 
+              career foundation</p>
+      </div>
+      <div class="twoa">
+          <h2>Classroom Training</h2>
+          <p>Comprehensive instructor-led training
+              with opportunities to engage with the 
+              teacher, peers, and coworkers in person
+              and discuss ideas</p>
+      </div>
+      
+      <div class="threea">
+          <h2>Corporate training</h2>
+          <p>Corporate training is an excellent way 
+              to close the skills gap and develop a
+              highly competent and productive staff.</p>
+
+      </div>
+      <div class="foura">
+          <h2>Online Training</h2>
+          <p>Online Training With our online-based blended
+              training strategy, you’ll gain know-ledge and 
+              real world skills in the technologies.</p>
+
+      </div>
+      <div class="fivea">
+          <h2>100% Placement</h2>
+          <p>Get the best job placement aid from our seasoned
+              professionals who will assist you in attaining 
+              your career objectives</p>
+      </div>
+      <div class="sixa">
+          <h2>Projects on daily basis</h2>
+          <p>Daily projects will help you improve your abilities
+              by allowing you to try things on your own and learn from your failures.</p>
+
+      </div>
+  </div>
+  <hr style="width: 70%; height: 5px; margin-top: 50px; background-color: black; margin-left: 15%;">
+  <div class="container-fluid">
+    <div class="row" style="padding-left: 100px;padding-right: 100px;">
+      <h1 class="btn btn-success">REVIEWS OF STUDENTS</h1>
+      <div class="col-12" >
+          <div class="scrolling-wrapper">
+            {% for res in review %}
+              <div class="card course-card " style="width: 20rem;">
+                <video src="{{res.video.url}}" play controls style="width: 280px; height:190px ;  "></video>
+                  <div class="card-body">
+                      <h3 class="card-title">{{ res.name }}</h3>
+                  </div>                                
+              </div>
+            {% endfor %}
+            <h1 class=" btn btn-primary" style="margin-top: -230px;"><a class="dropdown-item" href="">VIEW MORE</a></h1>
+          </div>
+      </div>
+    </div>
+</div><br>
+<div class="colabrations">
+    <h1><u> Our Colabrations</u></h1>
+    <div style="width: 100%; "><br>
+        {% for res in company %}
+        <div style="width: 230px; height: 180px;   padding: 1px; float: left;  margin-left: 20px; padding: 2px; white-space: nowrap;">
+            <img src="{{res.image.url}}" alt=""  style="width: 240px; height:140px ;">
+        </div>
+        {% endfor%}
+        <h2 class=" btn btn-primary" style=" margin-left: 680px;" ><a class="dropdown-item" href="">VIEW MORE</a></h2><br><br>
+    </div>
+</div><hr style="font-weight: bold; width: 90%; margin-left: 5%;">
+<div class="media1">
+  <h1>&emsp;Follows Media's</h1>
+  &ensp;&emsp;<a href="https://www.bing.com/ck/a?!&&p=c6088e5149b4e4c4JmltdHM9MTY4NTc1MDQwMCZpZ3VpZD0xNTJkODQ5Yy01MGViLTY3YmEtMmFlOS05NjFkNTFiOTY2MTImaW5zaWQ9NTIyNg&ptn=3&hsh=3&fclid=152d849c-50eb-67ba-2ae9-961d51b96612&psq=vcube+software+solutions+facebook&u=a1aHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL1ZDdWJlU29mdHdhcmVTb2x1dGlvbnMv&ntb=1"><img  src="https://1000logos.net/wp-content/uploads/2016/11/Facebook-logo.png" style="width: 65px;height: 45px;" ></a>
+  <a href="https://www.bing.com/ck/a?!&&p=fa3c7f793110b236JmltdHM9MTY4NjA5NjAwMCZpZ3VpZD0xNTJkODQ5Yy01MGViLTY3YmEtMmFlOS05NjFkNTFiOTY2MTImaW5zaWQ9NTE5Ng&ptn=3&hsh=3&fclid=152d849c-50eb-67ba-2ae9-961d51b96612&psq=vcube+intragram&u=a1aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbS9WQ3ViZVNvZnR3YXJlU29sdXRpb25zLw&ntb=1"><img  src="https://pngimg.com/uploads/instagram/instagram_PNG10.png" style=" height: 40px; width: 40px;"></a>&nbsp;&nbsp;
+  <a href=""><img src="https://feeds.abplive.com/onecms/images/uploaded-images/2023/07/24/d1c5b0bb6d3d68974aa535c859e8bb711690190849793402_original.jpg?impolicy=abp_cdn&imwidth=720" style="height: 40px; width: 40px; border-radius: 20px;"></a>
+  <a href="https://www.bing.com/ck/a?!&&p=9bd00ae985b0fe04JmltdHM9MTY4NjA5NjAwMCZpZ3VpZD0xNTJkODQ5Yy01MGViLTY3YmEtMmFlOS05NjFkNTFiOTY2MTImaW5zaWQ9NTIxMg&ptn=3&hsh=3&fclid=152d849c-50eb-67ba-2ae9-961d51b96612&psq=vcube+software+solutions+youtube&u=a1aHR0cHM6Ly93d3cueW91dHViZS5jb20vYy9WQ3ViZVNvZnR3YXJlU29sdXRpb25z&ntb=1"><img  src="https://www.freeiconspng.com/uploads/logo-youtube-png-clipart-11.png" style="width: 59px; height: 42px;"></a>
+  <a href="https://in.linkedin.com/posts/vcubesoftsolutions_hiring-opportunity-software-activity-6975057934443560960-PnrB?trk=public_profile_share_view"><img src="https://www.kindpng.com/picc/m/363-3632986_logo-linkedin-png-rond-transparent-png.png" style="height: 46px; width: 46px; border-radius: 20px;"></a>
+</div><br>
+
+<div class="bottom">
+  <div class="logo">
+      <img src="https://d1fdloi71mui9q.cloudfront.net/lp3RTh22TimXgezp93dX_0001-31514908032.png" alt="" style="border-radius: 20px; ">
+      <h1>V CUBE SOFTWARE SOLUTIONS PVT.LTD</h1>
+      <h2>Learn Best Courses In Our Training Academy For your IT Career</h2>
+      <h3>V CUBE Can Assist you to Reach Your Goal with IT  Courses</h3>
+  </div>
+  <div class="headings">
+      <ul>
+          <ol><a href="">Home</a></ol>
+          <ol>About</ol>
+          <ol>Courses</ol>
+          <ol>Contact</ol>
+          <ol>Servises</ol>
+          <ol>Privacy Polacy</ol>
+          <ol>Login</ol>
+      </ul>
+  
+
+  </div>
+  <div class="address1">
+      <b><h1><u> Address 1:</u></h1>
+  <p> V CUBE Software Solutions Pvt.Ltd.<br>
+          second floor,<br>
+          above Raymond’s <br>
+          clothing store,<br>
+          KPHB Phase 1 Kukatpally,<br>
+          Hyderabad, <br>
+          Telangana 500072 <br>
+          Contact us : <br>
+          +917675070124 <br>
+          +919059456742</p></b>
+  </div>
+  <div class="address2">
+      <b><h1><u> Address 2:</u></h1>
+      <p>V CUBE Software Solutions <br>Pvt.Ltd.&ensp;<br>
+          HIG-211, <br>
+          Beside Annamayya Hotel, <br>
+          Dhana Lakshmi Center,<br>
+          KPHB Phase 1&2,<br>
+          Kukatpally,
+          Hydearabad <br>
+          Telangana-500072 <br>
+          Contact us : <br>
+          +917675070124 <br>
+          +919059456742
+      </p></b>
+  </div>
+  <div class="media">
+      <a href="https://www.bing.com/ck/a?!&&p=c6088e5149b4e4c4JmltdHM9MTY4NTc1MDQwMCZpZ3VpZD0xNTJkODQ5Yy01MGViLTY3YmEtMmFlOS05NjFkNTFiOTY2MTImaW5zaWQ9NTIyNg&ptn=3&hsh=3&fclid=152d849c-50eb-67ba-2ae9-961d51b96612&psq=vcube+software+solutions+facebook&u=a1aHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL1ZDdWJlU29mdHdhcmVTb2x1dGlvbnMv&ntb=1"><img  src="https://1000logos.net/wp-content/uploads/2016/11/Facebook-logo.png" style="width: 45px;height: 35px;" ></a>
+      <a href="https://www.bing.com/ck/a?!&&p=fa3c7f793110b236JmltdHM9MTY4NjA5NjAwMCZpZ3VpZD0xNTJkODQ5Yy01MGViLTY3YmEtMmFlOS05NjFkNTFiOTY2MTImaW5zaWQ9NTE5Ng&ptn=3&hsh=3&fclid=152d849c-50eb-67ba-2ae9-961d51b96612&psq=vcube+intragram&u=a1aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbS9WQ3ViZVNvZnR3YXJlU29sdXRpb25zLw&ntb=1"><img  src="https://pngimg.com/uploads/instagram/instagram_PNG10.png" style=" height: 30px; width: 30px;"></a>&nbsp;&nbsp;
+      <a href=""><img src="https://feeds.abplive.com/onecms/images/uploaded-images/2023/07/24/d1c5b0bb6d3d68974aa535c859e8bb711690190849793402_original.jpg?impolicy=abp_cdn&imwidth=720" style="height: 30px; width: 30px; border-radius: 20px;"></a>
+      <a href="https://www.bing.com/ck/a?!&&p=9bd00ae985b0fe04JmltdHM9MTY4NjA5NjAwMCZpZ3VpZD0xNTJkODQ5Yy01MGViLTY3YmEtMmFlOS05NjFkNTFiOTY2MTImaW5zaWQ9NTIxMg&ptn=3&hsh=3&fclid=152d849c-50eb-67ba-2ae9-961d51b96612&psq=vcube+software+solutions+youtube&u=a1aHR0cHM6Ly93d3cueW91dHViZS5jb20vYy9WQ3ViZVNvZnR3YXJlU29sdXRpb25z&ntb=1"><img  src="https://www.freeiconspng.com/uploads/logo-youtube-png-clipart-11.png" style="width: 40px; height: 30px;"></a>
+      <a href="https://in.linkedin.com/posts/vcubesoftsolutions_hiring-opportunity-software-activity-6975057934443560960-PnrB?trk=public_profile_share_view"><img src="https://www.kindpng.com/picc/m/363-3632986_logo-linkedin-png-rond-transparent-png.png" style="height: 30px; width: 30px; border-radius: 20px;"></a>
+  </div>
+  
+</div>
+
+</body>
+</html>
+
+
+
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .main img{
+            margin: 0px;
+            padding: 0px;
+            height: 750px;
+            width: 100%;
+            
+        }
+        .headpart h1{
+            color:rgb(255, 253, 254);
+            margin-left: 310px;
+            margin-top: -740px;
+            font-size: 60px;
+             
+         }
+        .headpart img{
+            height: 110px;
+            width: 170px;
+            margin-top: -100px;
+            margin-left:30px ;
+        }
+        .ul{
+            font-size: 15px;
+            color: rgb(16, 22, 27);
+            margin-top: -50px;
+            margin-left: 200px;
+            
+        }
+        .ul button{
+            height: 40px;
+            width: 120px;
+            font-size: 28px;
+            border-radius: 10px;
+            background-color: rgb(244, 242, 243);
+            transition: transform .2s;
+        }
+        .ul button:hover{
+            -ms-transform: scale(1.2); 
+            -webkit-transform: scale(1.2); 
+            transform: scale(1.2); 
+        }
+             
+        .ul a{
+            text-decoration: none;
+        }
+        
+
+        .main-n{
+            
+            height: 50%;
+            width: 50%;
+            text-align: center;
+            margin-left: 80px;
+            font-size: 25px;
+            color: aliceblue;  
+        }
+        .right{
+            height: 50%;
+            width: 60%;
+            color: white;
+            margin-left: 800px;
+            margin-top: -500px;
+            font-size: 22px;
+        }
+
+        .content{
+            width: 100%;
+            height: 70%;
+            background-color: azure;
+            margin-top: 150px;
+            
+        }
+        .one img{
+            width: 500px;
+            height: 350px;
+            margin-top: 80px;
+            margin-left: 110px;
+            border-radius: 60%;   
+        }
+        .one h1{
+            height: 500px;
+            width: 400px;
+            font-size: 45px;
+            margin-left: 60%;
+            margin-top: -320px;
+            color: orangered;
+        }
+        .one p{
+            height: 500px;
+            width: 450px;
+            margin-top: -400px;
+            margin-left: 60%;
+            font-size: large;
+        }
+        .two img{
+            width: 500px;
+            height: 350px;
+            margin-top: -310px;
+            margin-left: 800px;
+            border-radius: 60%; 
+        }
+        .two h1{
+            height: 500px;
+            width: 400px;
+            font-size: 45px;
+            margin-left: 10%;
+            margin-top: -350px;
+            color: orangered;
+
+        }
+        .two p{
+            height: 500px;
+            width: 450px;
+            margin-top: -450px;
+            margin-left: 10%;
+            font-size: large;
+        }
+        .three img{
+            width: 500px;
+            height: 350px;
+            margin-top: -200px;
+            margin-left: 130px;
+            border-radius: 60%;   
+        }
+        .three h1{
+            height: 500px;
+            width: 400px;
+            font-size: 45px;
+            margin-left: 60%;
+            margin-top: -320px;
+            color: orangered;
+        }
+        .three p{
+            height: 500px;
+            width: 450px;
+            margin-top: -450px;
+            margin-left: 60%;
+            font-size: large;
+        }
+        .four img{
+            width: 500px;
+            height: 350px;
+            margin-top: -200px;
+            margin-left: 800px;
+            border-radius: 60%; 
+        }
+        .four h1{
+            height: 500px;
+            width: 400px;
+            font-size: 45px;
+            margin-left: 10%;
+            margin-top: -350px;
+            color: orangered;
+        }
+        .four p{
+            height: 500px;
+            width: 450px;
+            margin-top: -450px;
+            margin-left: 11%;
+            font-size: large;
+        }
+        .about{
+            width: 70%;
+            height: 70%;
+            font-size: large;
+            background-color:azure ;
+            text-align: center;
+            margin-left: 200px;
+            color: darkorange;
+        }
+        .onea{
+            width: 23%;
+            height: 200px;
+            margin-left: 7%;
+            color:black;
+        }
+        
+        .twoa{
+            width: 23%;
+            height: 200px;
+            margin-left: 38%;
+            margin-top: -220px;
+            color:black;
+        }
+        .threea{
+            width: 23%;
+            height: 200px;
+            margin-left: 70%;
+            margin-top: -220px;
+            color:black;
+        }
+        .foura{
+            width: 23%;
+            height: 200px;
+            margin-left: 7%;
+            color:black;
+            
+        }
+        .fivea{
+            width: 23%;
+            height: 200px;
+            margin-left: 38%;
+            margin-top: -240px;
+            color:black;
+        }
+        .sixa{
+            width: 23%;
+            height: 200px;
+            margin-left: 70%;
+           margin-top: -230px;
+           color:black;
+           
+        }
+        .advantage{
+            width: 70%;
+            height: 70%;
+            font-size: large;
+            background-color:azure ;
+            text-align: center;
+            margin-left: 200px;
+            color: darkorange;   
+        }
+        
+        .aone{
+            width: 35%;
+            height: 200px;
+            margin-left: 8%;
+            color:black;
+
+        }
+        .atwo{
+            width: 35%;
+            height: 200px;
+            margin-top: -22.5%;
+            margin-left: 54%;
+            color:black;
+
+        }
+        .athree{
+            width: 38%;
+            height: 200px;
+            margin-top: 20px;
+            margin-left: 8%;
+            color:black;
+
+        }
+        .afour{
+            width: 35%;
+            height: 200px;
+            margin-left: 54%;
+            margin-top: -21%;
+            color:black;
+
+        }
+        .review{
+            overflow: auto;
+            background-color: azure;
+            margin-left: 1%;
+        }
+        .review h1{
+            text-align: center;
+            color: darkorange;
+            font-size: 40px;
+        }
+        .placedstd{
+            width: 98%;
+            background-color: azure;
+            margin-left: 1%;
+        }
+        .placedstd h1{
+            text-align: center;
+            color: darkorange;
+            font-size: 40px;
+        }
+        
+        .colabrations{
+            width: 98%;
+            background-color: azure;
+            margin-left: 1%;
+        }
+        .colabrations h1{
+            text-align: center;
+            color: darkorange;
+            font-size: 40px;
+        }
+        .colabrations img{
+            width: 50px;
+            height: 50px;
+            border-radius: 34px;
+            padding: 10px;
+            
+        }
+        .media1{
+            height: 20%;
+            width: 28%;
+            margin-left: 510px;
+            padding:10px;
+            transition: transfrom.2s;
+            
+        }
+        .media1 img:hover{
+            -ms-transform: scale(1.3); 
+            -webkit-transform: scale(1.3); 
+            transform: scale(1.3); 
+        }
+
+        
+        .team{
+            width: 98%;
+            background-color: azure;
+           
+        }
+        .team h1{
+            text-align: center;
+            color: darkorange;
+            font-size: 40px;
+        }
+
+        .team img{
+            height: 100px;
+            width: 100px;
+            
+        }
+        
+        
+        .bottom{
+            width: 100%;
+            height: 400px;
+            background-image: url(https://s3-us-west-2.amazonaws.com/prod-mvelopes-website/wp-content/uploads/blog-bg-new-1.jpg);      
+        }
+        .logo{
+            width: 35%;
+            height: 100%;
+            text-align: center;
+            color: aliceblue;
+        }
+        .logo img{
+            height: 160px;
+            width: 240px;
+            margin-top: 5px;
+        }
+        .headings{
+            height: 100%;
+            width: 17%;
+            text-align: center;
+            margin-left: 35%;
+            margin-top: -400px;
+            font-size: 30px;      
+        }
+        .headings ol{
+            padding: 5px;
+            color: aliceblue;
+            transition: tranfirms.2s;
+            
+        }
+        .headings ol:hover{
+            -ms-transform: scale(1.3); 
+            -webkit-transform: scale(1.3); 
+            transform: scale(1.3); 
+        }
+        .headings a{
+            text-decoration: none;
+            
+            color: aliceblue;
+        }
+
+        .address1{
+            width: 25%;
+            height: 100%;
+            margin-left: 51%;
+            margin-top: -450px;
+            text-align: center; 
+            font-size: x-large; 
+            color: aliceblue;
+        }
+        .address2{
+            
+            width: 25%;
+            height: 100%;
+            margin-left: 75%;
+            margin-top: -430px;
+            text-align: center;
+            font-size: x-large;
+            color: aliceblue;
+        }
+        .address1 p{
+            font-size: 25px;
+            color:white;
+            
+        }
+        .address2 p{
+            font-size:25px ;
+            color:aliceblue;
+        }
+        .media{
+            height: 10%;
+            width: 18%;
+            margin-top: -70px;
+            margin-left: 505px;
+            padding: 5px;
+            transition: transform.2s;
+        }
+        .media img:hover{
+            -ms-transform: scale(1.4); 
+            -webkit-transform: scale(1.4); 
+            transform: scale(1.4); 
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="main">
+        <img src="https://sitios.aliatuniversidades.com.mx/hs-fs/hubfs/Licenciaturas_Presenciales/diseno_animacion_digital_filtro.jpg?width=3840&name=diseno_animacion_digital_filtro.jpg" alt="">
+        <div class="headpart">
+            <h1>VCUBE SOFTWARE SOLUTIONS</h1>
+            <img src="https://d1fdloi71mui9q.cloudfront.net/lp3RTh22TimXgezp93dX_0001-31514908032.png" alt="">
+            <ul class="ul">
+                <button><a href=""><il><b>Home</b></il></a></button>&emsp;
+                <button><a href="{% url 'coursesurl' %}"><il><b>Courses</b></il></a></button>&emsp;
+                <button><a href="{% url 'abouturl' %}"><il><b>About</b></il></a></button>&emsp;
+                <button><a href="{% url 'demosurl' %}"><il><b>Demos</b></il></a></button>&emsp;
+                <button><a href="{% url 'contacturl' %}"><il><b>Contact</b></il></a></button>&emsp;
+                <button ><a href="{% url 'servicesurl' %}"><il><b>Services</b></il></a></button>&emsp;
+                <button><a href="{% url 'enrollurl' %}"><il><b>Enroll</b></il></a></button>&ensp;
+                <button><a href="{% url 'loginurl' %}"><il><b>Login</b></il></a></button>
+            </ul>
+                <div class="main-n">
+                    <div class="left">
+                        <h2 style="color: rgb(252, 144, 12);"><u>V CUBE SOFTWARE SOLUTIONS PVT.LTD </u></h2>
+                            <h3>V CUBE SOFTWARE SOLUTIONS PVT.LTD 
+                                is one of the  Best software Training institutes,
+                                Can Assist you to Reach Your Goal with IT Courses</h3>
+                            <h5> vcube software solutions is the world’s ace software course training organization with an aim to bridge the gap between the demands of the industry and the curriculum of educational institutions.
+                                With centers across the Globe, the institute is a platform where young minds are given the opportunity to build successful <br>
+                                ”vcube software solutions is a place where businesses find talent and dreams take flight."</h5>      
+                            <button style="height: 50px; font-size: 20px; border-radius: 10px; background-color:aliceblue; cursor: pointer; "><a href="{% url 'coursesurl' %}" style="text-decoration: none;"><b>View Courses</b></a></button>          
+                    </div>
+                    <div class="right">
+                        <form action="" method="post">
+                            {% csrf_token %}
+                            <u><h2 style="color: darkorange;">Enroll Here</h2></u>
+                            {{form.Name.label}}  :{{form.Name}} <br><br>
+                            {{form.Email.label}}  :{{form.Email}} <br><br>
+                            {{form.Mobile_Number.label}}  :{{form.Mobile_Number}} <br><br>
+                            {{form.Courses.label}}  :{{form.Courses}} <br><br>
+                            {{form.Training.label}}  :{{form.Training}} <br><br>
+                            <input type="submit" value="submit" style="height: 37px ;width: 90px; border-radius: 7px; font-size: large; background-color: deeppink; color: aliceblue; cursor: pointer; "></button>
+                        </form>
+                    </div>
+                </div> 
+            </div>
+        </div>
+        <div class="content">
+            <div class="one">
+                <img src="https://d1fdloi71mui9q.cloudfront.net/lp3RTh22TimXgezp93dX_0001-31514908032.png" alt="">
+                <h1>What we do in Vcube...</h1>
+                <p>V CUBE Software Solutions Pvt.Ltd offers you the greatest available serivces
+                    which are decsribed below <br>
+                    *  Live classes <br>
+                    *  24/7 Access <br>
+                    *  Every projects <br>
+                    *  One on one mentorship <br>
+                    *  Guest lectures</p>
+            </div><br>
+            <div class="two">
+                <img src="https://www.vcubesoftsolutions.com/wp-content/uploads/2021/11/download-1536x1086.jpg" alt="">
+                <h1>What we're about?</h1>
+                <p>V CUBE SOFTWARE SOLUTIONS PVT.LTD, is an institute that caters to the needs
+                    of students, businessmen and freelancers wanting to learn, improve,
+                    explore and soar in their careers. Our corporate office is located in Kukatpally,
+                    Hyderabad, India and our training centres are in Kukatpally and Ameerpet, Hyderabad,
+                        India. V CUBE Software Solutions Pvt.Ltd offers online information technology courses,
+                        online computer programming classes, and starting information technology courses
+                        . Take advantage of both online and offline resources.</p>
+            </div>
+            <div class="three">
+                <img src="https://www.vcubesoftsolutions.com/wp-content/uploads/2021/11/training.jpg" alt="">
+                <h1>OUR SERVICE</h1>
+                <p>We offer high-quality training from industry experts in a variety of technologies
+                    to suit candidates with various academic backgrounds.The training is appropriate
+                    for all aspiring IT professionals and is provided by an experienced faculty team.
+                    We have seasoned instructors who can help professionals improve their technology
+                    skills for day-to-day tasks.</p>
+
+                </div>
+            <div class="four">
+                <img src="https://www.vcubesoftsolutions.com/wp-content/uploads/2021/11/e5e0b3f7-b9fb-4223-97e7-10249e3615de-1.jpg" alt="">
+                <h1>What we do ....?</h1>
+                <p>V CUBE Software Solutions Pvt.Ltd offers you the greatest available serivces which are decsribed below .<br>
+                *  Live classes <br>
+                *  24/7 Access <br>
+                *  Every projects <br>
+                *  One on one mentorship   <br>
+                *  Guest lectures </p>      
+            </div>
+        <hr style="margin-top: -200px;">
+        </div>
+    </div>
+    <div class="advantage" >
+            <h1><u> The V CUBE Software Solutions Pvt.Ltd Advantages</u></h1>
+            <div class="aone">
+                <i class="fa-solid fa-business-time fa-beat" style="font-size: 40px; "></i> 
+                <h2>In-Time Course Completion</h2>
+                <p>Committed to pure professionalism we make sure that the course program gets 
+                    completed the scheduled time. Equal priority will be given for both theoretical 
+                    & practical sessions</p>
+            </div><br>
+            <div class="atwo">
+                <i class="fa-solid fa-laptop fa-beat" style="font-size: 40px;"></i>
+                <h2>Free Demo Sessions</h2>
+                <p>Free Demo Sessions (Online/Offline) by our qualified domain experts will help
+                    the aspirants to get a better idea about the course program & 
+                    can get their doubts clarified by the experts</p>
+            </div>
+            <div class="athree">
+                <i class="fa-solid fa-briefcase fa-beat" style="font-size: 40px;"></i>
+                <h2>State-Of-The-Art Infrastructure</h2>
+                <p>Get ready to witness an ultimate learning experience with our 
+                    state-of-the-art-infrastructure which includes digitalized classrooms,
+                    sophisticated lab & other features</p>
+
+            </div><br>
+            <div class="afour">
+                <i class="fa-solid fa-blender fa-beat" style="font-size: 40px;"></i>
+                <h2>Blended Training Approach</h2>
+                <p>Exposure towards real-time industry training by our trusted experienced
+                    trainers will help you become a complete dominant professional in your desired profession.</p>
+            </div>
+    </div><br>
+
+    <div class="review">
+        <h1><u> Reviews Of Students</u></h1>
+        <div style=" height: 200px ; overflow: auto;">
+            {% for res in review %}
+            <div style="width: 310px; float: left; padding: 8px; text-align: center; " >
+                <video src="{{res.video.url}}" play controls style="width: 300px; height:190px ; margin-left: 30px;  float: left; white-space: nowrap;  "></video>
+                <h2>Name:{{res.name}}</h2>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="placedstd">
+        <h1><u>Recently Placed Students</u></h1>
+        <div style="width: 100%; height: 650px; overflow-x: scroll;"><br>
+            {% for res in placed %}
+                <div style="width: 200px; height: 300px; font-size: 15px;  padding: 10px;  margin-left: 15px; white-space: nowrap; float: left; text-align: center;">
+                    <img src="{{res.image.url}}" alt="" style="width: 230px; height: 200px;  ">
+                    <h4>Name: {{res.name}}</h4>
+                    <h4>Company: {{res.company}}</h4>
+                    <h4>Pakage:{{res.pakage}}</h4>
+                </div>
+            {% endfor %} 
+        </div>
+    </div>
+        <div class="about">
+            <h1><u> The Best Place to Develop Your Career In V CUBE Software Solutions Pvt.Ltd</u></h1>
+            <div class="onea">
+                <h2>Price that is reasonable</h2>
+                <p>At a fair price, you can get 
+                    the greatest learning experience
+                    and the best knowledge-based 
+                    career foundation</p>
+            </div>
+            <div class="twoa">
+                <h2>Classroom Training</h2>
+                <p>Comprehensive instructor-led training
+                    with opportunities to engage with the 
+                    teacher, peers, and coworkers in person
+                    and discuss ideas</p>
+            </div>
+            
+            <div class="threea">
+                <h2>Corporate training</h2>
+                <p>Corporate training is an excellent way 
+                    to close the skills gap and develop a
+                    highly competent and productive staff.</p>
+
+            </div>
+            <div class="foura">
+                <h2>Online Training</h2>
+                <p>Online Training With our online-based blended
+                    training strategy, you’ll gain know-ledge and 
+                    real world skills in the technologies.</p>
+
+            </div>
+            <div class="fivea">
+                <h2>100% Placement</h2>
+                <p>Get the best job placement aid from our seasoned
+                    professionals who will assist you in attaining 
+                    your career objectives</p>
+            </div>
+            <div class="sixa">
+                <h2>Projects on daily basis</h2>
+                <p>Daily projects will help you improve your abilities
+                    by allowing you to try things on your own and learn from your failures.</p>
+
+            </div>
+        </div><br>
+        <div class="colabrations">
+            <h1><u> Our Colabrations</u></h1>
+            <div style="width: 100%; overflow-x: scroll;"><br>
+                {% for res in company %}
+                <div style="width: 230px; height: 180px;   padding: 1px; float: left;  margin-left: 20px; padding: 2px; white-space: nowrap;">
+                    <img src="{{res.image.url}}" alt=""  style="width: 240px; height:140px ;">
+                </div>
+                {% endfor%}
+            </div>
+
+        </div>
+        <div class="media1">
+            <h1>&emsp;Follows Media's</h1>
+            <a href="https://www.bing.com/ck/a?!&&p=c6088e5149b4e4c4JmltdHM9MTY4NTc1MDQwMCZpZ3VpZD0xNTJkODQ5Yy01MGViLTY3YmEtMmFlOS05NjFkNTFiOTY2MTImaW5zaWQ9NTIyNg&ptn=3&hsh=3&fclid=152d849c-50eb-67ba-2ae9-961d51b96612&psq=vcube+software+solutions+facebook&u=a1aHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL1ZDdWJlU29mdHdhcmVTb2x1dGlvbnMv&ntb=1"><img  src="https://1000logos.net/wp-content/uploads/2016/11/Facebook-logo.png" style="width: 65px;height: 45px;" ></a>
+            <a href="https://www.bing.com/ck/a?!&&p=fa3c7f793110b236JmltdHM9MTY4NjA5NjAwMCZpZ3VpZD0xNTJkODQ5Yy01MGViLTY3YmEtMmFlOS05NjFkNTFiOTY2MTImaW5zaWQ9NTE5Ng&ptn=3&hsh=3&fclid=152d849c-50eb-67ba-2ae9-961d51b96612&psq=vcube+intragram&u=a1aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbS9WQ3ViZVNvZnR3YXJlU29sdXRpb25zLw&ntb=1"><img  src="https://pngimg.com/uploads/instagram/instagram_PNG10.png" style=" height: 40px; width: 40px;"></a>&nbsp;&nbsp;
+            <a href=""><img src="https://www.aps.edu/sapr/images/pnglot.comtwitterbirdlogopng139932.png/image" style="height: 40px; width: 40px; border-radius: 20px;"></a>
+            <a href="https://www.bing.com/ck/a?!&&p=9bd00ae985b0fe04JmltdHM9MTY4NjA5NjAwMCZpZ3VpZD0xNTJkODQ5Yy01MGViLTY3YmEtMmFlOS05NjFkNTFiOTY2MTImaW5zaWQ9NTIxMg&ptn=3&hsh=3&fclid=152d849c-50eb-67ba-2ae9-961d51b96612&psq=vcube+software+solutions+youtube&u=a1aHR0cHM6Ly93d3cueW91dHViZS5jb20vYy9WQ3ViZVNvZnR3YXJlU29sdXRpb25z&ntb=1"><img  src="https://www.freeiconspng.com/uploads/logo-youtube-png-clipart-11.png" style="width: 59px; height: 42px;"></a>
+            <a href="https://in.linkedin.com/posts/vcubesoftsolutions_hiring-opportunity-software-activity-6975057934443560960-PnrB?trk=public_profile_share_view"><img src="https://www.kindpng.com/picc/m/363-3632986_logo-linkedin-png-rond-transparent-png.png" style="height: 46px; width: 46px; border-radius: 20px;"></a>
+        </div>
+        
+        <div class="team" >
+            <h1><u>Our Team</u></h1>
+            <div style=" width: 100%; overflow-x: scroll; "><br>
+            {% for res in team %}
+                <div style="width:250px ; float: left; padding: 2px; margin-left: 65px; text-align: center;">
+                    <img src="{{res.image.url}}" alt="" style="height: 130px; width: 170px; border-radius: 50px;">
+                    <h2 >{{res.name}}</h2>
+                    <h2>{{res.description}}</h2>
+                </div>
+            {% endfor %} 
+            </div>
+
+        </div><br>
+        <div class="bottom">
+            <div class="logo">
+                <img src="https://d1fdloi71mui9q.cloudfront.net/lp3RTh22TimXgezp93dX_0001-31514908032.png" alt="" style="border-radius: 20px; ">
+                <h1>V CUBE SOFTWARE SOLUTIONS PVT.LTD</h1>
+                <h2>Learn Best Courses In Our Training Academy For your IT Career</h2>
+                <h3>V CUBE Can Assist you to Reach Your Goal with IT  Courses</h3>
+            </div>
+            <div class="headings">
+                <ul>
+                    <ol><a href="">Home</a></ol>
+                    <ol>About</ol>
+                    <ol>Courses</ol>
+                    <ol>Contact</ol>
+                    <ol>Servises</ol>
+                    <ol>Privacy Polacy</ol>
+                    <ol>Login</ol>
+                </ul>
+            
+
+            </div>
+            <div class="address1">
+                <b><h2><u> Address 1:</u></h2>
+            <p> V CUBE Software Solutions Pvt.Ltd.<br>
+                    second floor, <br>
+                    above Raymond’s <br>
+                    clothing store,<br>
+                    KPHB Phase 1 Kukatpally,<br>
+                    Hyderabad, <br>
+                    Telangana 500072 <br>
+                    Contact us : <br>
+                    +917675070124 <br>
+                    +919059456742</p></b>
+            </div>
+            <div class="address2">
+                <b><h2><u> Address 2:</u></h2>
+                <p>V CUBE Software Solutions Pvt.Ltd.&ensp;<br>
+                    HIG-211, <br>
+                    Beside Annamayya Hotel, <br>
+                    Dhana Lakshmi Center,<br>
+                    KPHB Phase 1&2,<br>
+                    Kukatpally,
+                    Hydearabad <br>
+                    Telangana-500072 <br>
+                    Contact us : <br>
+                    +917675070124 <br>
+                    +919059456742
+                </p></b>
+            </div>
+            <div class="media">
+                <a href="https://www.bing.com/ck/a?!&&p=c6088e5149b4e4c4JmltdHM9MTY4NTc1MDQwMCZpZ3VpZD0xNTJkODQ5Yy01MGViLTY3YmEtMmFlOS05NjFkNTFiOTY2MTImaW5zaWQ9NTIyNg&ptn=3&hsh=3&fclid=152d849c-50eb-67ba-2ae9-961d51b96612&psq=vcube+software+solutions+facebook&u=a1aHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL1ZDdWJlU29mdHdhcmVTb2x1dGlvbnMv&ntb=1"><img  src="https://1000logos.net/wp-content/uploads/2016/11/Facebook-logo.png" style="width: 45px;height: 35px;" ></a>
+                <a href="https://www.bing.com/ck/a?!&&p=fa3c7f793110b236JmltdHM9MTY4NjA5NjAwMCZpZ3VpZD0xNTJkODQ5Yy01MGViLTY3YmEtMmFlOS05NjFkNTFiOTY2MTImaW5zaWQ9NTE5Ng&ptn=3&hsh=3&fclid=152d849c-50eb-67ba-2ae9-961d51b96612&psq=vcube+intragram&u=a1aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbS9WQ3ViZVNvZnR3YXJlU29sdXRpb25zLw&ntb=1"><img  src="https://pngimg.com/uploads/instagram/instagram_PNG10.png" style=" height: 30px; width: 30px;"></a>&nbsp;&nbsp;
+                <a href=""><img src="https://www.aps.edu/sapr/images/pnglot.comtwitterbirdlogopng139932.png/image" style="height: 30px; width: 30px; border-radius: 20px;"></a>
+                <a href="https://www.bing.com/ck/a?!&&p=9bd00ae985b0fe04JmltdHM9MTY4NjA5NjAwMCZpZ3VpZD0xNTJkODQ5Yy01MGViLTY3YmEtMmFlOS05NjFkNTFiOTY2MTImaW5zaWQ9NTIxMg&ptn=3&hsh=3&fclid=152d849c-50eb-67ba-2ae9-961d51b96612&psq=vcube+software+solutions+youtube&u=a1aHR0cHM6Ly93d3cueW91dHViZS5jb20vYy9WQ3ViZVNvZnR3YXJlU29sdXRpb25z&ntb=1"><img  src="https://www.freeiconspng.com/uploads/logo-youtube-png-clipart-11.png" style="width: 40px; height: 30px;"></a>
+                <a href="https://in.linkedin.com/posts/vcubesoftsolutions_hiring-opportunity-software-activity-6975057934443560960-PnrB?trk=public_profile_share_view"><img src="https://www.kindpng.com/picc/m/363-3632986_logo-linkedin-png-rond-transparent-png.png" style="height: 30px; width: 30px; border-radius: 20px;"></a>
+            </div>
+            
+        </div>
+
+    </body>
+</html>
+-->
